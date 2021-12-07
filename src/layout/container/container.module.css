@@ -1,0 +1,11 @@
+.root {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 600px) {
+  .root {
+    margin-left: 240px;
+  }
+}

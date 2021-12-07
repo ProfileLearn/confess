@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Container from './layout/container/Container'
+import Header from './layout/header/Header'
+import { Footer } from './layout/footer/Footer'
+import ResponsiveDrawer from './components/Drawer/ResponsiveDrawer'
+import { BrowserRouter } from 'react-router-dom'
+import style from './app.module.css'
 
-function App() {
+
+export const App = () => {
+
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <div className={style.root}>
+        <Header onBtnClick={handleDrawerToggle} />
+        <ResponsiveDrawer open={mobileOpen} onClose={handleDrawerToggle} onClick={handleDrawerToggle} />
+        <Container />
+        <Footer />
+      </div>
+    </BrowserRouter>
+  )
 }
-
-export default App;

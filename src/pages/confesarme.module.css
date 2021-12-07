@@ -1,0 +1,44 @@
+.root {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 5px;
+  height: 100%;
+  background-color: black;
+}
+
+.label {
+  text-align: center;
+  font-weight: bolder;  
+  color: white;
+  padding: 1rem 0 1rem 0;
+
+}
+
+.input {
+  line-height: 3;
+}
+
+.btnContainer {
+  display: flex;
+}
+
+.btnSubmit {
+  background-color: green;
+  color: white;
+  width: 50%;
+  height: 3rem;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.btnReset {
+  background-color: green;
+  color: white;
+  width: 50%;
+  height: 3rem;
+  font-size: larger;
+  font-weight: bolder;
+}

@@ -1,0 +1,20 @@
+  .footer {
+    background-color: black;
+    height: auto;
+    color: white;
+    height: 10rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  @media (min-width: 600px) {
+    .footer {
+      margin-left: 240px;
+    }
+  }
+
+  .img {
+    height: 5rem;
+    width: 5rem;  
+  }
